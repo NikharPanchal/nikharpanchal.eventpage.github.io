@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta charset="UTF-8">
+    <title>Event Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            font-size: 15px !important;
+        }
+
+        .header-area {
+            position: relative;
+            width: 100%;
+        }
+
+        .top-label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            text-align: right;
+            width: 40%;
+        }
+
+        .tem-color {
+            color: #696969 !important;
+        }
+
+        .header-img {
+            position: inherit;
+            width: 100%;
+        }
+
+        .nav-label {
+            background-color: #ececec;
+        }
+
+        .main-bar {
+            background-color: white;
+        }
+
+        /* .nav-item {
+    text-align: right !important;
+} */
+        .text-event {
+            padding: 5px;
+            height: 40px;
+            background-color: #093058;
+        }
+
+        .text-decoration {
+            text-decoration: none;
+        }
+
+        .respo {
+            width: 100%;
+            height: auto;
+        }
+
+        .regis-respo {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        .jwlogo {
+            width: 30%;
+            height: 20%;
+            margin-right: 15px;
+        }
+
+        .left-col {
+            margin: 0;
+            padding: 0;
+            /* width: 15% !important;
+    max-width: 15% !important; */
+            background-color: #ececec;
+        }
+
+        .right-col {
+            width: 80% !important;
+            max-width: 80% !important;
+        }
+
+        /* for left - right col responsive accoring to viewport */
+        .side-bar {
+            width: 100%;
+        }
+
+        .img-margin {
+            display: block;
+            margin-left: 40%;
+            margin-right: 50%;
+            width: auto;
+            height: auto;
+        }
+
+        @media screen and (max-width:480px) {
+            .header-area {
+                position: relative;
+                width: 100%;
+            }
+
+            .top-label {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 20px;
+                text-align: right;
+                width: 40%;
+            }
+
+            .tem-color {
+                color: #696969 !important;
+            }
+
+            .header-img {
+                position: inherit;
+                width: 100%;
+            }
+
+            .nav-label {
+                background-color: #ececec;
+            }
+
+            .main-bar {
+                background-color: white;
+            }
+
+            /* .nav-item {
+    text-align: right !important;
+} */
+            .text-event {
+                padding: 5px;
+                height: 40px;
+                background-color: #093058;
+            }
+
+            .text-decoration {
+                text-decoration: none;
+            }
+
+            .respo {
+                width: 100%;
+                height: auto;
+            }
+
+            .regis-respo {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+            }
+
+            .jwlogo {
+                width: 30%;
+                height: 20%;
+                margin-right: 15px;
+            }
+
+            .left-col {
+                margin: 0;
+                padding: 0;
+                /* width: 15% !important;
+    max-width: 15% !important; */
+                background-color: #ececec;
+                width: 20%;
+            }
+
+            .right-col {
+                width: 80% !important;
+                max-width: 80% !important;
+            }
+
+            /* for left - right col responsive accoring to viewport */
+            .side-bar {
+                width: 100%;
+            }
+
+            .img-margin {
+                display: block;
+                margin-left: 40%;
+                margin-right: 50%;
+                width: auto;
+                height: auto;
+            }
+
+            .question-input {
+                width: 70%;
+                margin-left: 10px;
+                background-color: #DEEAF7;
+            }
+
+            .question-text-area {
+                width: 70%;
+                margin-left: 10px;
+            }
+
+            .submit-btn {
+                width: 20%;
+                margin: -20px 0px 10px 10px;
+                border-radius: 5px;
+            }
+
+            .lorem-text {
+                font-size: 15px !important;
+            }
+        }
+
+        @media Screen and (min-width:320px) {
+
+            .nav-link {
+                padding: 0;
+                margin-left: -80px;
+                text-align: right;
+            }
+
+            .img-margin {
+                display: block;
+                margin-left: 40%;
+                margin-right: 50%;
+                width: auto;
+                height: auto;
+            }
+        }
+
+        .question-input {
+            width: 70%;
+            margin-left: 10px;
+            background-color: #DEEAF7;
+        }
+
+        .question-text-area {
+            width: 70%;
+            margin-left: 10px;
+        }
+
+        .submit-btn {
+            width: 20%;
+            margin: -20px 0px 10px 10px;
+            border-radius: 5px;
+        }
+
+        .lorem-text {
+            font-size: 15px !important;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+
+            <img class="header-img" src="/HTMl/AspireTask/images/header.jpg" alt="container image">
+
+            <div class="form-group top-label">
+                <div class="row">
+                    <div class="col">
+                        <label class="text-white" for="exampleInputEmail1">administator</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="border-0 rounded-0 form-control">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+
+    <div class="row nav-label border-3 border-bottom">
+        <p class="tem-color px-3 pt-2 pb-0">Learn from the best minds in your industry</p>
+    </div>
+    <div class="container-fluid m-0 p-0">
+        <div>
+            <div class="row">
+                <div class="col-2 left-col">
+                    <nav class="side-bar">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item border-3 border-bottom ">
+                                <a class="nav-link" href="#"> home </a>
+                            </li>
+                            <li class="nav-item border-3 border-bottom">
+                                <a class="nav-link" href="#"> blog </a>
+                            </li>
+                            <li class="nav-item border-3 border-bottom">
+                                <a class="nav-link" href="#"> schedule </a>
+                            </li>
+                            <li class="nav-item border-3 border-bottom">
+                                <a class="nav-link" href="#"> speakers </a>
+                            </li>
+
+                            <li class="nav-item border-3 border-bottom">
+                                <a class="nav-link" href="#"> loginging </a>
+                            </li>
+
+                            <li class="nav-item border-3 border-bottom">
+                                <a class="nav-link" href="#"> testimonials </a>
+                            </li>
+
+                            <li class="nav-item border-3 border-bottom">
+                                <a class="nav-link" href="#"> contact </a>
+                            </li>
+
+                            <li class="nav-item border-3 border-bottom">
+                                <a class="nav-link" href="#"> register </a>
+                            </li>
+
+
+                            <li class="nav-item text-event border-3 border-bottom text-center">
+                                <a class="text-center text-decoration text-white"> Events</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <img src="/HTMl/AspireTask/images/poker.jpg" class="img-margin responsive-img">
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <img src="/HTMl/AspireTask/images/golf.jpg" class="img-margin responsive-img">
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link">
+                                    <img src="/HTMl/AspireTask/images/poker.jpg" class="img-margin responsive-img">
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <img src="/HTMl/AspireTask/images/golf.jpg" class="img-margin responsive-img">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-10 pr-5">
+                    <div class="container-fluid m-0 p-0">
+                        <div class="row pt-2">
+                            <div class="col-9">
+                                <img class="respo" src="/HTMl/AspireTask/images/featuredImage2.jpg">
+                            </div>
+                            <div class="col-3">
+                                <div class="card">
+                                    <div class="card-body nav-label p-1">
+                                        <p class="card-title ">register now
+                                            <img class="float-end" src="/HTMl/AspireTask/images/register.png"></img>
+                                        </p>
+                                    </div>
+                                    <img class="responsive-img regis-respo px-1 py-3"
+                                        src="/HTMl/AspireTask/images/registerNow.jpg" alt="Card image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid m-0 p-0">
+                        <div class="row pt-3">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body nav-label p-1">
+                                        <p class="card-title ">who are we?
+                                            <img class="float-end" src="/HTMl/AspireTask/images/lens.png"></img>
+                                        </p>
+                                    </div>
+                                    <img class="card-img-bottom p-2 responsive-img"
+                                        src="/HTMl/AspireTask/images/handsShaking.jpg" alt="Card image">
+                                    <p class="lorem-text card-text px-2 py-2">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing
+                                        elit.
+                                        Harum ea,
+                                        quasi possimus, et neque aliquam soluta esse exercitationem totam magnam numquam
+                                        inventore eaque optio culpa adipisci asperiores aperiam corporis omnis?</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body nav-label p-1">
+                                        <p class="card-title ">when is it?
+                                            <img class="float-end" src="/HTMl/AspireTask/images/alarm.png"></img>
+                                        </p>
+                                    </div>
+                                    <img class="card-img-bottom p-2 responsive-img"
+                                        src="/HTMl/AspireTask/images/calendar.jpg" alt="Card image">
+                                    <p class="lorem-text card-text px-2 py-2">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing
+                                        elit.
+                                        Harum ea,
+                                        quasi possimus, et neque aliquam soluta esse exercitationem totam magnam numquam
+                                        inventore eaque optio culpa adipisci asperiores aperiam corporis omnis?</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body nav-label p-1">
+                                        <p class="card-title ">how much to attend?
+                                            <img class="float-end" src="/HTMl/AspireTask/images/talkIcon.png"></img>
+                                        </p>
+                                    </div>
+                                    <img class="card-img-bottom p-2 responsive-img"
+                                        src="/HTMl/AspireTask/images/coins.jpg" alt="Card image">
+                                    <p class="lorem-text card-text px-2 py-2">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing
+                                        elit.
+                                        Harum
+                                        ea,
+                                        quasi possimus, et neque aliquam soluta esse exercitationem totam magnam numquam
+                                        inventore eaque optio culpa adipisci asperiores aperiam corporis omnis?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid p-0 m-0">
+
+                        <div class="row mt-3">
+                            <div class="col-4 mr-3">
+
+                                <div class="row p-3">
+                                    <div class="card p-0">
+                                        <div class="card-body nav-label p-1">
+                                            <p class="card-title">have a question?
+                                                <img class="float-end" src="/HTMl/AspireTask/images/email.png"></img>
+                                            </p>
+                                        </div>
+
+                                        <label class="px-2 py-2">Name: </label>
+                                        <input type="text" class="question-input">
+                                        <label class="px-2 py-2">Email: </label>
+                                        <input type="text" class="question-input ">
+                                        <label class="px-2 py-2">questions:</label>
+                                        <textarea class="question-text-area" cols="5" row="6"></textarea>
+                                        <br><br>
+                                        <input type="submit" class="submit-btn" value="Go">
+                                    </div>
+                                </div>
+
+                                <div class="row p-3">
+                                    <div class="card p-0">
+                                        <div class="card-body nav-label p-0">
+                                            <p class="card-title">classes
+                                                <img class="float-end"
+                                                    src="/HTMl/AspireTask/images/microphone.png"></img>
+                                            </p>
+                                        </div>
+                                        <img class="card-img-bottom responsive-img"
+                                            src="/HTMl/AspireTask/images/seminar.jpg" alt="Card image">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-8 pt-3">
+                                <div class="card">
+                                    <div class="card-body nav-label p-1">
+                                        <p class="card-title ">news/blog
+                                            <img class="float-end" src="/HTMl/AspireTask/images/pen.png"></img>
+                                        </p>
+                                    </div>
+
+                                    <h5 class="h5 p-1">Should Your Entire Staff Attend?</h5>
+                                    <em class="p-1">November 3,2008</em>
+                                    <p class="lorem-text px-2"><img src="/HTMl/AspireTask/images/jwLogo.jpg"
+                                            alt="Pineapple" class="lorem-text float-end mr-10 jwlogo">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
+                                        nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+                                        venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+                                        massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+                                        sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+                                        hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+                                        dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec
+                                        vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+                                        fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris
+                                        quis diam velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+                                        scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue
+                                        eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
+                                        ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a
+                                        lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed </p>
+
+                                    <p class="lorem-text px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aut
+                                        cupiditate dicta facilis similique veritatis odit sed hic, sequi fuga culpa.
+                                        Sapiente ab in doloremque ipsa molestias vitae nostrum, tenetur excepturi. Lorem
+                                        ipsum, dolor sit amet consectetur adipisicing elit. Nostrum explicabo dolor, ea
+                                        reiciendis assumenda modi, qui temporibus vel nihil illum cupiditate omnis
+                                        similique beatae. Minima molestiae labore libero voluptate ab.</p>
+
+                                    <p class="lorem-text px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptates,
+                                        sequi reprehenderit hic perferendis obcaecati eligendi totam suscipit, eos iusto
+                                        commodi ratione, non laudantium libero dolores aliquam soluta quibusdam
+                                        dignissimos labore?
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, ab veniam eos aut
+                                        iste laudantium? Deleniti quam quasi quis, labore accusamus ullam officia!
+                                        Expedita nostrum iure eius delectus distinctio dolor Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. In consequuntur laudantium, cumque deserunt, illo
+                                        ab ullam maxime quaerat provident architecto molestias ut veniam sequi, culpa
+                                        rem ad laboriosam magnam tenetur.
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pt-4">
+        <p class="text-center">Designed By : Jeffrey Way</p>
+    </footer>
+
+
+</body>
+
+</html>
