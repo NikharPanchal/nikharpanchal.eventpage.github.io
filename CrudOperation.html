@@ -77,12 +77,12 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Insert Student Data</h5>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Add student information</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <form class="was-validated">
+                        <form class="was-validated" novalidate>
 
                             <div class="modal-body">
 
@@ -90,12 +90,14 @@
 
                                 <div class="row row-md">
                                     <div class="col col-sm mt-2 w-25">
+                                        <label>First Name</label>
                                         <input type="text" placeholder="First Name" id="fname" required
                                             class="form-control mt-2">
 
                                     </div>
 
                                     <div class="col col-sm mt-2 w-25">
+                                        <label>Last Name</label>
                                         <input type="text" placeholder="Last Name" id="lname" required
                                             class="form-control mt-2">
                                     </div>
@@ -103,17 +105,20 @@
 
                                 <div class="row">
                                     <div class="col col-sm mt-2 w-25">
-                                        <textarea class="form-control mt-4" id="address" required cols="20" rows="3"
+                                        <label>Permenent Address</label>
+                                        <textarea class="form-control" id="address" required cols="20" rows="3"
                                             placeholder="Enter Permenent Address"></textarea>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col col-sm mt-4 w-25">
+                                <div class="row pt-2">
+                                    <div class="col col-sm w-25">
+                                        <label>DOB</label>
                                         <input type="date" id="date" required class="form-control">
                                     </div>
 
-                                    <div class="col col-sm mt-4 w-25">
+                                    <div class="col col-sm w-25">
+                                        <label>Phone no</label>
                                         <input type="tel" required id="contact" class="form-control"
                                             placeholder="Contact Number.." maxlength="10">
                                     </div>
@@ -136,11 +141,11 @@
 
                                 <div class="row">
                                     <div class="col col-sm mt-4 w-25">
+                                        <label>Email Address</label>
                                         <input type="email" id="email" required placeholder="Enter Email id"
                                             class="form-control">
                                     </div>
                                 </div>
-
 
                             </div>
 
@@ -175,12 +180,15 @@
                                 <input type="hidden" id="studrollno">
 
                                 <div class="row row-md">
-                                    <div class="col col-sm mt-2 w-25">
+                                    <div class="col col-sm mt-2 w-25 form-outline">
+                                        <label>First Name</label>
                                         <input type="text" placeholder="First Name" id="studfname" required="required"
                                             class="form-control mt-2">
+
                                     </div>
 
                                     <div class="col col-sm mt-2 w-25">
+                                        <label>Last Name</label>
                                         <input type="text" placeholder="Last Name" id="studlname" required
                                             class="form-control mt-2">
                                     </div>
@@ -188,6 +196,7 @@
 
                                 <div class="row">
                                     <div class="col col-sm mt-2 w-25">
+                                        <label>Permenent Address</label>
                                         <textarea class="form-control mt-4" id="studaddress" required cols="20" rows="3"
                                             placeholder="Enter Permenent Address"></textarea>
                                     </div>
@@ -195,10 +204,12 @@
 
                                 <div class="row">
                                     <div class="col col-sm mt-4 w-25">
+                                        <label>DOB</label>
                                         <input type="date" id="studdate" required class="form-control">
                                     </div>
 
                                     <div class="col col-sm mt-4 w-25">
+                                        <label>Contact No</label>
                                         <input type="tel" required id="studcontact" class="form-control"
                                             placeholder="Contact Number..">
                                     </div>
@@ -222,6 +233,7 @@
 
                                 <div class="row">
                                     <div class="col col-sm mt-4 w-25">
+                                        <label>Email Address</label>
                                         <input type="email" id="studemail" required placeholder="Enter Email id"
                                             class="form-control">
                                     </div>
@@ -256,7 +268,8 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" onclick="clearAllRecord()" class="btn btn-primary">Delete</button>
+                            <button type="button" onclick="clearAllRecord()" data-dismiss="modal"
+                                class="btn btn-primary">Delete</button>
                         </div>
                     </div>
                 </div>
