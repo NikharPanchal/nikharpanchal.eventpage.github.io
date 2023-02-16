@@ -45,8 +45,6 @@ document.querySelector('.submitdata').addEventListener('click', save)
 
 function validateinsert() {
 
-    alert("insert validate call")
-
     const fname = document.getElementById('fname').value;
     const lname = document.getElementById('lname').value;
     const address = document.getElementById('address').value;
@@ -55,18 +53,16 @@ function validateinsert() {
     const email = document.getElementById('email').value;
 
     if (fname === "" || lname === "" || address === "" || date === "" || contact === "" || email === "") {
-        alert('return true')
+
         return true;
     }
     else {
-        alert('return false')
         return false;
     }
 }
 
 function validateupdate() {
 
-    alert("update validate call")
 
     const fname = document.getElementById('studfname').value;
     const lname = document.getElementById('studlname').value;
@@ -76,11 +72,9 @@ function validateupdate() {
     const email = document.getElementById('studemail').value;
 
     if (fname === "" || lname === "" || address === "" || date === "" || contact === "" || email === "") {
-        alert('return true')
         return true;
     }
     else {
-        alert('return false')
         return false;
     }
 }
@@ -88,7 +82,6 @@ function validateupdate() {
 function save() {
 
     if (!validateinsert()) {
-        alert("save")
         if (localStorage.getItem('studObject') == null) {
             var studArr = [];
             document.getElementById('rollno').setAttribute('value', 100);
@@ -111,7 +104,7 @@ function save() {
             email: document.getElementById('email').value
         }
 
-        alert(studetData.gender);
+
         studArr.push(studetData);
         localStorage.setItem("studObject", JSON.stringify(studArr));
 
@@ -175,10 +168,8 @@ document.querySelector('.editstudentdata').addEventListener('click', update)
 
 function update() {
 
-    alert('update called')
 
     if (!validateupdate()) {
-        alert("update")
         studupdateArr = JSON.parse(localStorage.getItem('studObject')) ?? [];
 
         studupdateArr.forEach(index => {
@@ -202,8 +193,5 @@ function clearAllRecord() {
 
     if (localStorage.getItem('studObject') != null) {
         localStorage.clear();
-    }
-    else {
-
     }
 }
