@@ -15,13 +15,21 @@
                 }
                 form.classList.add('was-validated')
             }, false)
-            $("#closebtn").on("click", function (event) {
-                event.preventDefault();
-                $('#insertform')
-                    .trigger("reset")
-                    .removeClass('was-validated')
-            });
+
         })
+    $("#closebtn").on("click", function (event) {
+        event.preventDefault();
+        $('#insertform')
+            .trigger("reset")
+            .removeClass('was-validated')
+    });
+
+    $("#closebtnmodal").on("click", function (event) {
+        event.preventDefault();
+        $('#insertform')
+            .trigger("reset")
+            .removeClass('was-validated')
+    });
 })()
 
 var rollno = "";

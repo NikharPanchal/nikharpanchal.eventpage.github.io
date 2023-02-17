@@ -39,11 +39,11 @@
     <div class="container">
         <h1 class="text-center pt-5">Student Data Table</h1>
         <div class="row">
-            <div class="col-2">
+            <div class="col-sm-2 mt-2 col-sm-2">
                 <button class="btn btn-primary" data-toggle="modal" onclick="clearModal()"
                     data-target="#exampleModalCenter">Add Student</a>
             </div>
-            <div class="col-2">
+            <div class="col-sm-2 mt-2 col-sm-2">
                 <button class="btn btn-success" data-toggle="modal" data-target="#deletemodal"><a class="
                     text-white text-decoration-none">Clear
                         All Data</button></a>
@@ -109,7 +109,7 @@
                                 </div>
 
                                 <div class="row row-md">
-                                    <div class="col col-sm w-50">
+                                    <div class="col col-sm w-50 mt-2">
                                         <label>Permenent Address</label>
                                         <textarea class="form-control" id="address" required cols="30" rows="3"
                                             placeholder="Enter Permenent Address"></textarea>
@@ -140,21 +140,18 @@
                                     </div>
                                 </div>
 
-                                <div class="row row-md mt-4 mr-5">
-                                    <div class="">
-                                        <div class="col">
-                                            <input class="form-check-input" type="radio" value="male" id="male" required
-                                                name="gender">
-                                            <label class="form-check-label">Male</label>
-                                        </div>
+                                <div class="row mt-4">
+
+                                    <div class="col">
+                                        <input class="form-check-input" type="radio" value="male" id="male" required
+                                            name="gender">
+                                        <label class="form-check-label">Male</label>
                                     </div>
 
-                                    <div class="">
-                                        <div class="col">
-                                            <input class="form-check-input" type="radio" id="female" value="female"
-                                                required name="gender">
-                                            <label class="form-check-label">Female</label>
-                                        </div>
+                                    <div class="col">
+                                        <input class="form-check-input" type="radio" id="female" value="female" required
+                                            name="gender">
+                                        <label class="form-check-label">Female</label>
                                     </div>
 
                                 </div>
@@ -163,7 +160,7 @@
                         </div>
 
                         <div class="modal-footer">
-                            <button type="button" id="closebtn" class="btn btn-secondary"
+                            <button type="button" id="closebtnmodal" class="btn btn-secondary"
                                 data-dismiss="modal">Close</button>
                             <button type="submit" id="save" class="btn btn-primary submitdata">Save</button>
                         </div>
@@ -293,8 +290,9 @@
 
     <script>
         let currentDate = new Date().toJSON().slice(0, 10);
-        console.log(currentDate); // "2022-06-17"
+        console.log(currentDate);
         document.getElementById("date").setAttribute("max", currentDate);
+        document.getElementById("studdate").setAttribute("max", currentDate);
 
         getAllData()
 
