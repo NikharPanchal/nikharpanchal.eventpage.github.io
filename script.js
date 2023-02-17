@@ -1,5 +1,30 @@
-var rollno = "";
+(function () {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
 
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                else {
+                    save()
+                }
+                form.classList.add('was-validated')
+            }, false)
+            $("#closebtn").on("click", function (event) {
+                event.preventDefault();
+                $('#insertform')
+                    .trigger("reset")
+                    .removeClass('was-validated')
+            });
+        })
+})()
+
+var rollno = "";
 
 function getAllData() {
 
@@ -41,7 +66,7 @@ function getAllData() {
 }
 
 
-document.querySelector('.submitdata').addEventListener('click', save)
+//document.querySelector('.submitdata').addEventListener('click', save)
 
 function validateinsert() {
 
@@ -193,23 +218,6 @@ function clearAllRecord() {
 
     if (localStorage.getItem('studObject') != null) {
         localStorage.clear();
+        getAllData()
     }
 }
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-    'use strict';
-
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation');
-
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms).forEach((form) => {
-        form.addEventListener('submit', (event) => {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-        }, false);
-    });
-})();
