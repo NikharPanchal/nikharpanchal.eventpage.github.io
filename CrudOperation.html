@@ -37,14 +37,14 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center pt-5">Student Data Table</h1>
-        <div class="row">
-            <div class="col-sm-2 mt-2 col-sm-2">
-                <button class="btn btn-primary" data-toggle="modal" onclick="clearModal()"
+        <h1 class="text-center mt-5">Student Data Table</h1>
+        <div class="row mt-3">
+            <div class="col-6">
+                <button class="btn btn-primary float-start" data-toggle="modal" onclick="clearModal()"
                     data-target="#exampleModalCenter">Add Student</a>
             </div>
-            <div class="col-sm-2 mt-2 col-sm-2">
-                <button class="btn btn-success" data-toggle="modal" data-target="#deletemodal"><a class="
+            <div class="col-6">
+                <button class="btn btn-success float-right" data-toggle="modal" data-target="#deletemodal"><a class="
                     text-white text-decoration-none">Clear
                         All Data</button></a>
             </div>
@@ -85,8 +85,7 @@
                         </div>
 
                         <div class="modal-body">
-                            <form id="insertform" class="row needs-validation p-3" novalidate>
-
+                            <form id="insertform" class="needs-validation p-3" novalidate>
 
                                 <input type="hidden" id="rollno">
 
@@ -96,12 +95,7 @@
                                         <input type="text" class="form-control mt-2" id="fname" required>
 
                                     </div>
-                                    <!-- <div class="col col-sm mt-2 w-25">
-                                        <label>First Name</label>
-                                        <input type="text" placeholder="First Name" id="fname" required
-                                            class="form-control mt-2">
 
-                                    </div> -->
                                     <div class="col col-sm w-25">
                                         <label for="validationCustom01" class="form-label">Last name</label>
                                         <input type="text" class="form-control mt-2" id="lname" required>
@@ -132,29 +126,31 @@
                                     </div>
                                 </div>
 
-                                <div class="row row-md pt-2">
-                                    <div class="col col-sm mt-5 w-50">
-                                        <label>Email Address</label>
-                                        <input type="email" id="email" required placeholder="Enter Email id"
-                                            class="form-control">
-                                    </div>
-                                </div>
+                                <div class="row p-3">
 
-                                <div class="row mt-4">
-
-                                    <div class="col">
+                                    <div class="col-6">
                                         <input class="form-check-input" type="radio" value="male" id="male" required
                                             name="gender">
                                         <label class="form-check-label">Male</label>
                                     </div>
 
-                                    <div class="col">
+                                    <div class="col-6">
                                         <input class="form-check-input" type="radio" id="female" value="female" required
                                             name="gender">
                                         <label class="form-check-label">Female</label>
                                     </div>
 
                                 </div>
+
+
+                                <div class="row">
+                                    <div class="col-12 pt-2">
+                                        <label>Email Address</label>
+                                        <input type="email" id="email" required placeholder="Enter Email id"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
 
 
                         </div>
